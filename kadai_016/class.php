@@ -17,9 +17,9 @@
       $this->price = $price;
     }
 
-    // ゲッターで price を取得
-    public function getPrice() {
-      return $this->price;
+    // 出力するメソッドを定義
+    public function show_price() {
+      echo $this->price . '<br>';
     }
   }
 
@@ -28,6 +28,7 @@
 
   // オブジェクト全体を表示
   print_r($food);
+  echo '<br>';
   ?>
 </p>
 
@@ -45,9 +46,9 @@
       $this->weight = $weight;
     }
 
-    // ゲッターで height を取得
-    public function getHeight() {
-      return $this->height;
+    // 出力するメソッドを定義
+    public function show_height() {
+      echo $this->height . '<br>';
     }
   }
 
@@ -55,14 +56,14 @@
   $animal = new Animal('dog', 60, 5000);
 
   // オブジェクト全体を表示
-  print_r($animal) ;
-
+  print_r($animal);
   echo '<br>';
+
   // Food オブジェクトの price を表示
-  echo $food->getPrice() . '<br>';  
+  $food->show_price();  
 
   // Animal オブジェクトの height を表示
-  echo $animal->getHeight() . '<br>'; 
+  $animal->show_height();  
   ?>
 </p>
 </body>
